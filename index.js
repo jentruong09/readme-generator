@@ -1,11 +1,19 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
+
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
 const questions = [
     inquirer
         .prompt([
+            {
+                type: 'input',
+                message: 'What is your GitHub username?',
+                name: 'username'
+            },
             {
                 type: 'input',
                 message: 'What is the name of your project?',
@@ -58,13 +66,16 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName,data, (err) =>
+    fs.writeFile(fileName, data, (err) =>
         err ? console.log(err) : console.log('Your file has generated!')
 );
 }
 
-// TODO: Create a function to initialize app
-//function init() {}
+// TODO: Create a function to initialize app - async function init()?? {await...} - to wait for all answer before creating each section? 
+async function init() {
+ 
+
+}
 
 // Function call to initialize app
-//init();
+init();
