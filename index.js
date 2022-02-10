@@ -7,8 +7,8 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
 const questions = [
-    inquirer
-        .prompt([
+    //inquirer
+        //.prompt([
             {
                 type: 'input',
                 message: 'What is your GitHub username?',
@@ -62,7 +62,7 @@ const questions = [
                 name: 'question'
             }
 
-])];
+]//)];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -72,10 +72,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app - async function init()?? {await...} - to wait for all answer before creating each section? 
-async function init() {
- 
-
+function init() {
+    inquirer.prompt(questions)
+    .then (function(data){
+        writeToFile("README.md", generateMarkdown(data))
+        
+    })
 }
 
-// Function call to initialize app
+//Function call to initialize app
 init();
