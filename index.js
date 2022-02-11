@@ -108,6 +108,7 @@ const questions = [
                 type: 'input',
                 message: 'Please provide your name that is linked to GitHub so that users can reach out about questions and issues.', // Not sure if this will work
                 name: 'question',
+                default: 'Jennifer Truong',
                 validate: function (question) {
                     if (question.length < 1) {
                         return console.log('Please enter your name so that your information can be linked to your GitHub.')
