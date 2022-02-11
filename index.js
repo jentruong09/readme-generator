@@ -47,9 +47,9 @@ const questions = [
                 type: 'input',
                 message: 'Please add information about installation process and/or deployment links.',
                 name: 'installation',
-                validate: function (title) {
-                    if (title.length < 1) {
-                        return console.log('Please enter a title.')
+                validate: function (installation) {
+                    if (installation.length < 1) {
+                        return console.log('Please enter installation information.')
                     }
                     return true;
                 }
@@ -57,12 +57,24 @@ const questions = [
             {
                 type: 'input',
                 message: 'Please add information about how to use the application.',
-                name: 'usage'
+                name: 'usage',
+                validate: function (usage) {
+                    if (usage.length < 1) {
+                        return console.log('Please enter usage information.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
                 message: 'Please add any third-party assets used that require attribution as well as any technologies use.',
-                name: 'credit'
+                name: 'credit',
+                validate: function (credit) {
+                    if (credit.length < 1) {
+                        return console.log('Please enter credit information.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'list',
@@ -73,17 +85,35 @@ const questions = [
             {
                 type: 'input',
                 message: 'Please list any contributor(s) for this project.',
-                name: 'contributors'
+                name: 'contributors',
+                validate: function (contributors) {
+                    if (contributors.length < 1) {
+                        return console.log('Please enter contributors information.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
                 message: 'Please add any tests for application and how to run them.',
-                name: 'test'
+                name: 'test',
+                validate: function (test) {
+                    if (test.length < 1) {
+                        return console.log('Please enter test information.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
-                message: 'Please provide your full name that is linked to GitHub so that users can reach out about questions and issues.', // Not sure if this will work
-                name: 'question'
+                message: 'Please provide your name that is linked to GitHub so that users can reach out about questions and issues.', // Not sure if this will work
+                name: 'question',
+                validate: function (question) {
+                    if (question.length < 1) {
+                        return console.log('Please enter your name so that your information can be linked to your GitHub.')
+                    }
+                    return true;
+                }
             }
 
 ]//)];
