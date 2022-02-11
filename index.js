@@ -12,53 +12,77 @@ const questions = [
             {
                 type: 'input',
                 message: 'What is your GitHub username?',
-                name: 'username'
+                name: 'username',
+                default: 'jentruong09',
+                validate: function (username) {
+                    if (username.length < 1) {
+                        return console.log('Please enter a GitHub username.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
-                message: 'What is the name of your project?',
-                name: 'name' //Add validate?
+                message: 'What is the title of your project?',
+                name: 'title',
+                validate: function (title) {
+                    if (title.length < 1) {
+                        return console.log('Please enter a title.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
                 message: 'Please write a description of your project.',
-                name: 'description' //Add validate?
+                name: 'description',
+                validate: function (description) {
+                    if (description.length < 1) {
+                        return console.log('Please enter a description.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
-                message: '(Deployment Section) Please add information about installation process or deployment links.',
-                name: 'installation'
+                message: 'Please add information about installation process and/or deployment links.',
+                name: 'installation',
+                validate: function (title) {
+                    if (title.length < 1) {
+                        return console.log('Please enter a title.')
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
-                message: '(Usage Section) Please add information about how to use the application.',
+                message: 'Please add information about how to use the application.',
                 name: 'usage'
             },
             {
                 type: 'input',
-                message: '(Credits Section) Please add any third-party assets used that require attribution as well as any technologies use.',
+                message: 'Please add any third-party assets used that require attribution as well as any technologies use.',
                 name: 'credit'
             },
             {
                 type: 'list',
-                message: '(License Section) Please choose an appropriate license for your project.',
-                choices: ['MIT License', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense'],
+                message: 'Please choose an appropriate license for your project.',
+                choices: ['MIT License', 'GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense'],
                 name: 'license'
             },
             {
                 type: 'input',
-                message: '(Contributor(s) Section) Please list any contributors for this project.',
+                message: 'Please list any contributor(s) for this project.',
                 name: 'contributors'
             },
             {
                 type: 'input',
-                message: '(Test Section) Please add any tests for application and how to run them.',
+                message: 'Please add any tests for application and how to run them.',
                 name: 'test'
             },
             {
                 type: 'input',
-                message: '(Question Section) Please add any contact information. Please press enter for default.', // Not sure if this will work
-                default: 'question-default', //To be added??
+                message: 'Please provide your full name that is linked to GitHub so that users can reach out about questions and issues.', // Not sure if this will work
                 name: 'question'
             }
 
