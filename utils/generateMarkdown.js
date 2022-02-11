@@ -35,19 +35,19 @@ function generateMarkdown(data) {
     readLicense = 'https://opensource.org/licenses/MPL-2.0';
   };
   if (chosenLicense === 'Apache License 2.0') {
-    showLicense = ;
-    badgeLicense = ;
-    readLicense = ;
+    showLicense = 'Apache License 2.0';
+    badgeLicense = '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
+    readLicense = 'https://opensource.org/licenses/Apache-2.0';
   };
   if (chosenLicense === 'Boost Software License 1.0') {
-    showLicense = ;
-    badgeLicense = ;
-    readLicense = ;
+    showLicense = 'Boost Software License 1.0';
+    badgeLicense = '![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)';
+    readLicense = 'https://www.boost.org/LICENSE_1_0.txt';
   };
   if (chosenLicense === 'The Unlicense') {
-    showLicense = ;
-    badgeLicense = ;
-    readLicense = ;
+    showLicense = 'The Unlicense';
+    badgeLicense = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)';
+    readLicense = 'http://unlicense.org/';
   };
   
   return `
