@@ -27,7 +27,15 @@
   <br/>
 
   ## Usage
-  Please have node.js downloaded and typr node index.js into your terminal. Then you will be prompted with questions as the one in the video below: (Add video and pictures later!)
+  Please have node.js downloaded and type node index.js into your terminal. Then you will be prompted with questions as the one in the picture below:
+
+  ![screenshot](utils/screenShot.png)
+
+  <br/>
+  
+  Here is a video of how to run the application and a walk through of the prompts:
+
+  [Link to Demo Video](https://youtu.be/0B2F9N29T6M)
 
   <br/>
 
